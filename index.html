@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutricionista - Nutrição e Bem-Estar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav><img src="imagens/logo.png" alt="logo" style="height: 80px; width: 80px;"></nav>
+        <nav>
+            <a href="#" class="logo" data-tip="Página Inicial">NutriVida</a>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#imc">IMC</a></li>
+                <li><a href="#o-que-faz">O que faz uma Nutri</a></li>
+                <li><a href="#trabalhos">Trabalhos</a></li>
+                <li><a href="#comentarios">Comentários</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slideshow após nav -->
+    <div class="slideshow">
+        <img src="imagens\show 1.jpeg" alt="Imagem 1">
+        <img src="imagens\show 2.jpeg" alt="Imagem 2">
+    </div>
+
+    <main>
+        <section id="sobre">
+            <h2 data-tip="Conheça a nutricionista">Sobre Mim</h2>
+            <p>Olá! Sou [Nome da Nutricionista], apaixonada por ajudar você a alcançar seus objetivos de saúde através
+                de uma alimentação equilibrada e personalizada. Minha missão é promover o bem-estar e a qualidade de
+                vida.</p>
+        </section>
+
+        <section id="imc">
+            <h2>Calcule seu IMC</h2>
+            <p>O Índice de Massa Corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no
+                peso ideal. Insira seus dados abaixo:</p>
+            <form>
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" name="peso" data-tip="Digite seu peso">
+                <label for="altura">Altura (m):</label>
+                <input type="number" id="altura" name="altura" step="0.01" data-tip="Digite sua altura">
+                <button type="submit">Calcular</button>
+            </form>
+            <p id="resultado-imc"></p>
+        </section>
+
+        <section id="o-que-faz">
+            <h2>O que faz uma Nutricionista e por que é importante?</h2>
+            <p>Uma nutricionista é a profissional de saúde que estuda os alimentos e o efeito que eles produzem em nosso
+                organismo. Ela elabora planos alimentares personalizados, considerando suas necessidades individuais,
+                objetivos e estilo de vida. Consultar uma nutricionista é fundamental para prevenir doenças, melhorar o
+                desempenho físico e mental, e ter uma relação mais saudável com a comida.</p>
+        </section>
+
+       <section id="trabalhos">
+    <h2>Meus Trabalhos / Posts</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="imagens\post 1.jpeg" alt="Post 1">
+        </div>
+        <div class="card">
+            <img src="imagens\post 2.jpeg" alt="Post 2">
+        </div>
+        <div class="card">
+            <img src="imagens\post 3.jpeg" alt="Post 3">
+        </div>
+        <div class="card">
+            <img src="imagens\post 4.jpeg" alt="Post 4">
+        </div>
+        <div class="card">
+            <img src="imagens\post 5.jpeg" alt="Post 5">
+        </div>
+    </div>
+</section>
+
+
+        <section id="comentarios">
+            <h2>Comentários</h2>
+            <div class="comentario-carousel">
+                <div class="comentario ativo">
+                    <p>"Excelente profissional! Me ajudou a mudar meus hábitos alimentares."</p>
+                    <span>- Maria S.</span>
+                </div>
+                <div class="comentario">
+                    <p>"Resultados incríveis! Recomendo a todos."</p>
+                    <span>- João P.</span>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <div class="contato">
+                <p>Tire suas dúvidas ou agende sua primeira consulta.</p>
+                <address>
+                    <p><strong>Telefone/WhatsApp:</strong> <a href="tel:+5547991020763">(47) 99102-0763</a></p>
+                    <p><strong>Endereço:</strong> Rua João Bauer, 39 - Centro 1, Brusque - SC, 88350-101</p>
+                    <p><em>Atendimento presencial e/ou online.</em></p>
+                </address>
+            </div>
+    </main>
+
+    <footer>
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/cintiateskenutri/" data-tooltip="Instagram"><img
+                    src="imagens/Redes/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/espaconutrise.brusque/" data-tooltip="Facebook"><img src="imagens/Redes/Facebook_icon.png" alt="Facebook"></a>
+        </div>
+        <div class="direitos-reservados">
+            <p>&copy; 2024 NutriVida. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
