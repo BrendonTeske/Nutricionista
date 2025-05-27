@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutricionista - Nutrição e Bem-Estar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/logo.png">
 </head>
+<!-- Cabeçalho -->
 
 <body>
     <header>
-        <nav><img src="imagens/logo.png" alt="logo" style="height: 80px; width: 80px;"></nav>
+        <nav><img src="imagens/logo.png" alt="logo" style="height: 100px; width: 100px;"></nav>
         <nav>
-            <a href="#" class="logo" data-tip="Página Inicial">NutriVida</a>
             <ul>
                 <li><a href="#sobre">Sobre Mim</a></li>
                 <li><a href="#imc">IMC</a></li>
@@ -26,18 +27,23 @@
 
     <!-- Slideshow após nav -->
     <div class="slideshow">
-        <img src="imagens\show 1.jpeg" alt="Imagem 1">
+        <img src="imagens\show 1.jpeg" alt="Imagem 1" style="object-position: top;">
         <img src="imagens\show 2.jpeg" alt="Imagem 2">
     </div>
 
+    <!-- Um pouco sobre a Nutricionista  -->
     <main>
         <section id="sobre">
             <h2 data-tip="Conheça a nutricionista">Sobre Mim</h2>
-            <p>Olá! Sou [Nome da Nutricionista], apaixonada por ajudar você a alcançar seus objetivos de saúde através
-                de uma alimentação equilibrada e personalizada. Minha missão é promover o bem-estar e a qualidade de
-                vida.</p>
-        </section>
+            <p>Olá! Sou Cintia Teske, tenho 50 anos e uma energia que muitos dizem ser de 30. Ao longo de mais de duas
+                décadas de carreira, aprendi que saúde é um equilíbrio entre corpo, mente e prazer.</p>
 
+            <p> MinhA missão é mostrar que é possível envelhecer com vitalidade, leveza e uma aparência jovem - tudo
+                isso como um resultado de escolhas alimentares conscientes e sustentáveis. Acredito na nutrição como uma
+                ferramenta de transformação: mais do que números na balança, busco ajudar meus pacientes a se
+                reconectarem com seu corpo, sua autoestima e sua qualidade de vida.</p>
+        </section>
+        <!-- Parte ilustrativa do Cálculo IMC - Só em JAVA pra deixar certo -->
         <section id="imc">
             <h2>Calcule seu IMC</h2>
             <p>O Índice de Massa Corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no
@@ -51,50 +57,54 @@
             </form>
             <p id="resultado-imc"></p>
         </section>
-
+        <!-- Um pouco sobre O que faz uma Nutricionista -->
         <section id="o-que-faz">
             <h2>O que faz uma Nutricionista e por que é importante?</h2>
-            <p>Uma nutricionista é a profissional de saúde que estuda os alimentos e o efeito que eles produzem em nosso
-                organismo. Ela elabora planos alimentares personalizados, considerando suas necessidades individuais,
-                objetivos e estilo de vida. Consultar uma nutricionista é fundamental para prevenir doenças, melhorar o
-                desempenho físico e mental, e ter uma relação mais saudável com a comida.</p>
+            <p>Ser nutricionista vai muito além de prescrever dietas. É olhar para o outro com empatia, entender sua
+                história, sua relação com a comida, suas emoções e suas dificuldades. É ouvir sem julgar e guiar com
+                responsabilidade.</p>
+            <p>Uma nutricionista avalia o estado de saúde, os hábitos alimentares e o estilo de vida de cada pessoa,
+                buscando criar estratégias que façam sentido na prática. Afinal, comer bem não é sobre restrição, e sim
+                sobre equilíbrio, prazer e cuidado com o corpo e a mente.</p>
+            <p>No fundo, ser nutricionista é cuidar, com ciência, sim, mas também com coração. É ajudar cada pessoa a
+                descobrir uma forma de comer que nutre não só o corpo, mas a autoestima, a energia e a confiança para
+                viver melhor.</p>
         </section>
-
-       <section id="trabalhos">
-    <h2>Meus Trabalhos / Posts</h2>
-    <div class="cards">
-        <div class="card">
-            <img src="imagens\post 1.jpeg" alt="Post 1">
-        </div>
-        <div class="card">
-            <img src="imagens\post 2.jpeg" alt="Post 2">
-        </div>
-        <div class="card">
-            <img src="imagens\post 3.jpeg" alt="Post 3">
-        </div>
-        <div class="card">
-            <img src="imagens\post 4.jpeg" alt="Post 4">
-        </div>
-        <div class="card">
-            <img src="imagens\post 5.jpeg" alt="Post 5">
-        </div>
-    </div>
-</section>
-
-
-        <section id="comentarios">
-            <h2>Comentários</h2>
-            <div class="comentario-carousel">
-                <div class="comentario ativo">
-                    <p>"Excelente profissional! Me ajudou a mudar meus hábitos alimentares."</p>
-                    <span>- Maria S.</span>
+        <!-- Um pouco dos trabalhos desenvolvidos -->
+        <section id="trabalhos">
+            <h2>Meus Trabalhos / Posts</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="imagens\post 1.jpeg" alt="Post 1">
                 </div>
-                <div class="comentario">
-                    <p>"Resultados incríveis! Recomendo a todos."</p>
-                    <span>- João P.</span>
+                <div class="card">
+                    <img src="imagens\post 2.jpeg" alt="Post 2">
+                </div>
+                <div class="card">
+                    <img src="imagens\post 3.jpeg" alt="Post 3">
+                </div>
+                <div class="card">
+                    <img src="imagens\post 4.jpeg" alt="Post 4">
+                </div>
+                <div class="card">
+                    <img src="imagens\post 5.jpeg" alt="Post 5">
                 </div>
             </div>
         </section>
+
+        <!-- Comentários dos Clientes sobre minhas consultas -->
+        <section id="comentario">
+            <h2>Comentários</h2>
+            <div>
+                <p>"Muito atenciosa, paciente e dedicada. Faz uma consulta personalizada indagando bem como explicando
+                    todas as dúvidas. Muito interessada em todas as dificuldades e em ajudar quando necessário."</p>
+                <span>- Janaina T. Cabeceiro Zambom.</span>
+                <p>"Ela é incrível, uma profissional maravilhosa , atenta a cada detalhe ?? A cada dia me sinto mais
+                    apta a melhorar graças a todo retorno e cuidado que ela tem comigo ??"</p>
+                <span>- Elizama Vitória Dias Cota.</span>
+            </div>
+        </section>
+        <!-- Parte final com meus dados e endereçamento para o atendimento presencial -->
         <section id="contato">
             <h2>Entre em Contato</h2>
             <div class="contato">
@@ -106,15 +116,16 @@
                 </address>
             </div>
     </main>
-
+    <!-- Minhas redes sociais -->
     <footer>
         <div class="redes-sociais">
             <a href="https://www.instagram.com/cintiateskenutri/" data-tooltip="Instagram"><img
                     src="imagens/Redes/Instagram_icon.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/espaconutrise.brusque/" data-tooltip="Facebook"><img src="imagens/Redes/Facebook_icon.png" alt="Facebook"></a>
+            <a href="https://www.facebook.com/espaconutrise.brusque/" data-tooltip="Facebook"><img
+                    src="imagens/Redes/Facebook_icon.png" alt="Facebook"></a>
         </div>
         <div class="direitos-reservados">
-            <p>&copy; 2024 NutriVida. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Nutrise. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>

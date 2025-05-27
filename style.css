@@ -1,197 +1,171 @@
+/* Padrão de cores da página */
 :root {
-    --cor-principal: #5e7b39;
-    --cor-secundaria: #FFEB3B;
+  --cor-principal: #5e7b39;
+  --cor-secundaria: #FFEB3B;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background-color: var(--cor-principal);
+  background-color: var(--cor-principal);
 }
 
+/* nav e nav ul deixam a barra de navegação no meio e justificada*/
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1em;
-    flex-wrap: wrap;
-}
-
-nav .logo {
-    color: white;
-    font-size: 1.8em;
-    font-weight: bold;
-    text-decoration: none;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #5e7b39;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1em;
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: auto;
 }
 
+/* Link azul, é feio, agr ta branco */
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5em 0.8em;
-    border-radius: 5px;
-    transition: background 0.3s;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+/* corrige o "sumiu" para telas grandes */
+@media (min-width: 601px) {
+  .slideshow {
+    width: 65%;
+  }
 }
 
-/* Slideshow */
-.slideshow {
+/* Faz o "sumiu" ocupar todo o width em telas pequenas */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-left: 0%;
+  }
+
+  .slideshow {
     width: 100%;
-    height: 600px;
-    position: relative;
-    overflow: hidden;
+  }
+}
+
+/* Formatação geral do slideshow */
+.slideshow {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
 }
 
 .slideshow img {
-    width: 100%;
-    position: absolute;
-    opacity: 0;
-    animation: fadeSlide 12s infinite;
-    background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  animation: sumiu 8s infinite;
+  background-size: cover;
 }
 
+/* Delay das imagens do slideshow */
 .slideshow img:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .slideshow img:nth-child(2) {
-    animation-delay: 4s;
+  animation-delay: 4s;
 }
 
-.slideshow img:nth-child(3) {
-    animation-delay: 8s;
+/* Opacidade do slideshow */
+@keyframes sumiu {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
-@keyframes fadeSlide {
-    0% {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    40% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
+/* controla a largura do layout do conteúdo */
 main {
-    max-width: 1200px;
-    margin: 2em auto;
-    padding: 0 1em;
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 1em;
 }
 
+/* Aumenta espaçamento entre seções */
 section {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
+/* Formata os subtítulos */
 h2 {
-    color: var(--cor-principal);
-    border-bottom: 2px solid var(--cor-secundaria);
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
-    position: relative;
+  color: var(--cor-principal);
+  border-bottom: 2px solid var(--cor-secundaria);
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  position: relative;
 }
 
+/* Formatação ta tabela de imc */
 #imc form {
-    display: flex;
-    gap: 1em;
-    margin-bottom: 1em;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
 }
 
 #imc form input {
-    padding: 0.5em;
-    flex: 1;
+  padding: 0.5em;
+  flex: 1;
 }
 
 #imc form button {
-    background-color: var(--cor-principal);
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
+  background-color: var(--cor-principal);
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
 }
 
-.cards {
-    display: flex;
-    gap: 1em;
-    flex-wrap: wrap;
-}
-
-.card {
-    border: 1px solid #ccc;
-    padding: 1em;
-    text-align: center;
-    width: 30%;
-    min-width: 250px;
-}
-
-.card img {
-    max-width: 100%;
-}
-
-.comentario-carousel {
-    position: relative;
-    min-height: 100px;
-}
-
-.comentario {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.comentario.ativo {
-  opacity: 1;
-}
-
+/* Cor do footer levemente escurecida */
 footer {
   background-color: #f2f2f2;
   padding: 1em 0;
   text-align: center;
 }
 
-.redes-sociais {
-  margin-bottom: 1em;
-}
-
+/* espaçamento dos icones de redes sociais */
 .redes-sociais a {
   margin: 0 0.5em;
   display: inline-block;
   position: relative;
 }
 
+/* controla o tooltip e datatip dos icones de redes sociais */
 .redes-sociais a::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -212,7 +186,7 @@ footer {
   opacity: 1;
 }
 
-/* Datatip genérico */
+/* tooltip e datatip do sobremim */
 [data-tip]::after {
   content: attr(data-tip);
   position: absolute;
@@ -226,7 +200,6 @@ footer {
   opacity: 0;
   transform: translateY(-5px);
   transition: opacity 0.3s, transform 0.3s;
-  white-space: nowrap;
 }
 
 [data-tip]:hover::after {
@@ -234,44 +207,40 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsividade */
-@media (min-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .cards {
-    display: flex;
-    gap: 1em;
-    flex-wrap: wrap;
-    justify-content: center; /* Centraliza os cards */
+/* Centraliza os cards */
+.cards {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* Organiza o zoom dos cards */
 .card {
-    border: 1px solid #ccc;
-    padding: 1em;
-    text-align: center;
-    width: 30%;
-    min-width: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease; /* Suaviza o zoom */
+  border: 1px solid #ccc;
+  padding: 1em;
+  text-align: center;
+  width: 30%;
+  min-width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
+/* Zoom suave ao passar o mouse */
 .card:hover {
-    transform: scale(1.05); /* Zoom suave ao passar o mouse */
+  transform: scale(1.05);
 }
 
+/* Organiza as bordas e espaçamento das imagens nos cards */
 .card img {
-    max-width: 100%;
-    border-radius: 10px; /* Bordas arredondadas para a imagem também */
-    display: block; /* Remove espaço indesejado abaixo da imagem */
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
 }
-footer a img {width: 40px; height: 40px;}
+
+/* As redes sociais já são chamativas quando pequenas */
+footer a img {
+  width: 40px;
+  height: 40px;
 }
